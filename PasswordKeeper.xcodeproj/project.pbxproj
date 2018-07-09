@@ -1,0 +1,815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D0A181D20CC722900410CFD /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0A181C20CC722900410CFD /* SettingsTableViewController.swift */; };
+		5D1A312A20EAD3B600A83D38 /* MediaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A312920EAD3B600A83D38 /* MediaListViewController.swift */; };
+		5D2387ED20E456D600DA14CD /* Memo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D2387EC20E456D600DA14CD /* Memo.storyboard */; };
+		5D2387F320E5B3AA00DA14CD /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D2387F220E5B3AA00DA14CD /* Settings.storyboard */; };
+		5D2387F620E6CB1500DA14CD /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2387F520E6CB1500DA14CD /* MemoListTableViewController.swift */; };
+		5D2387F820E6D12D00DA14CD /* AddMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2387F720E6D12D00DA14CD /* AddMemoViewController.swift */; };
+		5D2387FA20E6DD0300DA14CD /* Memo+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2387F920E6DD0300DA14CD /* Memo+Convenience.swift */; };
+		5D2387FC20E6DDAC00DA14CD /* MemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2387FB20E6DDAC00DA14CD /* MemoController.swift */; };
+		5D29E43520C83F3100FC2D9F /* PasswordListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D29E43420C83F3100FC2D9F /* PasswordListTableViewController.swift */; };
+		5D29E43F20C891E600FC2D9F /* PasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D29E43E20C891E600FC2D9F /* PasswordController.swift */; };
+		5D29E44420C8AFE100FC2D9F /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D29E44320C8AFE100FC2D9F /* CoreDataStack.swift */; };
+		5D29E44720C98A4D00FC2D9F /* PasswordKeeper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D29E44520C98A4D00FC2D9F /* PasswordKeeper.xcdatamodeld */; };
+		5D29E44920C98B4800FC2D9F /* Password+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D29E44820C98B4800FC2D9F /* Password+Convenience.swift */; };
+		5D29E44B20C992D500FC2D9F /* PasswordInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D29E44A20C992D500FC2D9F /* PasswordInputController.swift */; };
+		5D29E44D20C9D7A600FC2D9F /* PasswordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D29E44C20C9D7A600FC2D9F /* PasswordDetailViewController.swift */; };
+		5D3C05F920C3C4730097197E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3C05F820C3C4730097197E /* AppDelegate.swift */; };
+		5D3C05FE20C3C4730097197E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3C05FC20C3C4730097197E /* Main.storyboard */; };
+		5D3C060020C3C4730097197E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3C05FF20C3C4730097197E /* Assets.xcassets */; };
+		5D3C060320C3C4730097197E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3C060120C3C4730097197E /* LaunchScreen.storyboard */; };
+		5D3C060E20C3C4730097197E /* PasswordKeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3C060D20C3C4730097197E /* PasswordKeeperTests.swift */; };
+		5D3C061920C3C49C0097197E /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3C061820C3C49C0097197E /* MainScreenViewController.swift */; };
+		5D6D28A220EE04ED000E8AA2 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D28A120EE04ED000E8AA2 /* ColorPalette.swift */; };
+		5D7A3A7F20E7614700384D6E /* MemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A3A7E20E7614700384D6E /* MemoListTableViewCell.swift */; };
+		5D7A3A8120E7656900384D6E /* MemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A3A8020E7656900384D6E /* MemoDetailViewController.swift */; };
+		5D83B8B020E83D810071E950 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83B8AF20E83D810071E950 /* SettingsController.swift */; };
+		5D83B8B820E84DFD0071E950 /* AutoFaceTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83B8B720E84DFD0071E950 /* AutoFaceTouch.swift */; };
+		5D83B8BA20E84E2B0071E950 /* AutoFaceTouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83B8B920E84E2B0071E950 /* AutoFaceTouchController.swift */; };
+		5DB7988F20CDE08C00302398 /* Media.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB7988E20CDE08C00302398 /* Media.storyboard */; };
+		5DB7989320CDE3B000302398 /* Password.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB7989220CDE3B000302398 /* Password.storyboard */; };
+		5DB7989520CE2BD900302398 /* AlbumListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7989420CE2BD900302398 /* AlbumListTableViewCell.swift */; };
+		5DB7989820CE2E2D00302398 /* AlbumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7989720CE2E2D00302398 /* AlbumController.swift */; };
+		5DB7989A20CECAD500302398 /* Album+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7989920CECAD500302398 /* Album+Convenience.swift */; };
+		5DB7989E20CED6BA00302398 /* MediaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7989D20CED6BA00302398 /* MediaController.swift */; };
+		5DB798A020CED76200302398 /* Media+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7989F20CED76200302398 /* Media+Convenience.swift */; };
+		5DB798A220CEDF7E00302398 /* MediaListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB798A120CEDF7E00302398 /* MediaListCollectionViewCell.swift */; };
+		5DB798A420CEEF0E00302398 /* MediaPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB798A320CEEF0E00302398 /* MediaPreviewViewController.swift */; };
+		5DB798A620CF7CDA00302398 /* PasswordListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB798A520CF7CDA00302398 /* PasswordListTableViewCell.swift */; };
+		5DCC32E420D0E24E007110E9 /* AddPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC32E320D0E24E007110E9 /* AddPasswordViewController.swift */; };
+		5DD1C7BC20CAF81500DEC9D3 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD1C7BB20CAF81500DEC9D3 /* ResetPasswordViewController.swift */; };
+		5DEB97F520CD89BC000EA92D /* LocalAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEB97F420CD89BC000EA92D /* LocalAuthentication.swift */; };
+		5DEB97FB20CDDE4A000EA92D /* AlbumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEB97FA20CDDE4A000EA92D /* AlbumTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D3C060A20C3C4730097197E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D3C05ED20C3C4720097197E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D3C05F420C3C4720097197E;
+			remoteInfo = PasswordKeeper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5D0A181C20CC722900410CFD /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		5D1A312920EAD3B600A83D38 /* MediaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewController.swift; sourceTree = "<group>"; };
+		5D2387EC20E456D600DA14CD /* Memo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Memo.storyboard; sourceTree = "<group>"; };
+		5D2387F220E5B3AA00DA14CD /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		5D2387F520E6CB1500DA14CD /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
+		5D2387F720E6D12D00DA14CD /* AddMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewController.swift; sourceTree = "<group>"; };
+		5D2387F920E6DD0300DA14CD /* Memo+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+Convenience.swift"; sourceTree = "<group>"; };
+		5D2387FB20E6DDAC00DA14CD /* MemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoController.swift; sourceTree = "<group>"; };
+		5D29E43420C83F3100FC2D9F /* PasswordListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListTableViewController.swift; sourceTree = "<group>"; };
+		5D29E43E20C891E600FC2D9F /* PasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordController.swift; sourceTree = "<group>"; };
+		5D29E44320C8AFE100FC2D9F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		5D29E44620C98A4D00FC2D9F /* PasswordKeeper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PasswordKeeper.xcdatamodel; sourceTree = "<group>"; };
+		5D29E44820C98B4800FC2D9F /* Password+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Password+Convenience.swift"; sourceTree = "<group>"; };
+		5D29E44A20C992D500FC2D9F /* PasswordInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordInputController.swift; sourceTree = "<group>"; };
+		5D29E44C20C9D7A600FC2D9F /* PasswordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDetailViewController.swift; sourceTree = "<group>"; };
+		5D3C05F520C3C4730097197E /* PasswordKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D3C05F820C3C4730097197E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5D3C05FD20C3C4730097197E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5D3C05FF20C3C4730097197E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D3C060220C3C4730097197E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5D3C060420C3C4730097197E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D3C060920C3C4730097197E /* PasswordKeeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordKeeperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D3C060D20C3C4730097197E /* PasswordKeeperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordKeeperTests.swift; sourceTree = "<group>"; };
+		5D3C060F20C3C4730097197E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D3C061820C3C49C0097197E /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		5D6D28A120EE04ED000E8AA2 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		5D7A3A7E20E7614700384D6E /* MemoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewCell.swift; sourceTree = "<group>"; };
+		5D7A3A8020E7656900384D6E /* MemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewController.swift; sourceTree = "<group>"; };
+		5D83B8AF20E83D810071E950 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		5D83B8B720E84DFD0071E950 /* AutoFaceTouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoFaceTouch.swift; sourceTree = "<group>"; };
+		5D83B8B920E84E2B0071E950 /* AutoFaceTouchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoFaceTouchController.swift; sourceTree = "<group>"; };
+		5DB7988E20CDE08C00302398 /* Media.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Media.storyboard; sourceTree = "<group>"; };
+		5DB7989220CDE3B000302398 /* Password.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Password.storyboard; sourceTree = "<group>"; };
+		5DB7989420CE2BD900302398 /* AlbumListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListTableViewCell.swift; sourceTree = "<group>"; };
+		5DB7989720CE2E2D00302398 /* AlbumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumController.swift; sourceTree = "<group>"; };
+		5DB7989920CECAD500302398 /* Album+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Album+Convenience.swift"; sourceTree = "<group>"; };
+		5DB7989D20CED6BA00302398 /* MediaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaController.swift; sourceTree = "<group>"; };
+		5DB7989F20CED76200302398 /* Media+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Media+Convenience.swift"; sourceTree = "<group>"; };
+		5DB798A120CEDF7E00302398 /* MediaListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListCollectionViewCell.swift; sourceTree = "<group>"; };
+		5DB798A320CEEF0E00302398 /* MediaPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPreviewViewController.swift; sourceTree = "<group>"; };
+		5DB798A520CF7CDA00302398 /* PasswordListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListTableViewCell.swift; sourceTree = "<group>"; };
+		5DCC32E320D0E24E007110E9 /* AddPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordViewController.swift; sourceTree = "<group>"; };
+		5DD1C7BB20CAF81500DEC9D3 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		5DEB97F420CD89BC000EA92D /* LocalAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthentication.swift; sourceTree = "<group>"; };
+		5DEB97FA20CDDE4A000EA92D /* AlbumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D3C05F220C3C4720097197E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D3C060620C3C4730097197E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D2387F020E456FD00DA14CD /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				5D83B8C620E9CEC20071E950 /* Views */,
+				5D83B8C720E9CECA0071E950 /* ViewControllers */,
+				5D83B8C820E9CED30071E950 /* ModelController */,
+			);
+			path = Memo;
+			sourceTree = "<group>";
+		};
+		5D2387F120E4804F00DA14CD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5D83B8BF20E9CCCF0071E950 /* ViewControllers */,
+				5D83B8BE20E9CCB50071E950 /* ModelController */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		5D2387F420E5DBE700DA14CD /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				5D83B8BD20E9CC510071E950 /* ViewControllers */,
+				5D83B8C520E9CEA50071E950 /* ModelController */,
+			);
+			path = "Main Screen";
+			sourceTree = "<group>";
+		};
+		5D29E44020C8A5AB00FC2D9F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5D29E44320C8AFE100FC2D9F /* CoreDataStack.swift */,
+				5D29E44820C98B4800FC2D9F /* Password+Convenience.swift */,
+				5D2387F920E6DD0300DA14CD /* Memo+Convenience.swift */,
+				5DB7989920CECAD500302398 /* Album+Convenience.swift */,
+				5DB7989F20CED76200302398 /* Media+Convenience.swift */,
+				5D29E44520C98A4D00FC2D9F /* PasswordKeeper.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5D3C05EC20C3C4720097197E = {
+			isa = PBXGroup;
+			children = (
+				5D3C05F720C3C4730097197E /* PasswordKeeper */,
+				5D3C060C20C3C4730097197E /* PasswordKeeperTests */,
+				5D3C05F620C3C4730097197E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5D3C05F620C3C4730097197E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D3C05F520C3C4730097197E /* PasswordKeeper.app */,
+				5D3C060920C3C4730097197E /* PasswordKeeperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D3C05F720C3C4730097197E /* PasswordKeeper */ = {
+			isa = PBXGroup;
+			children = (
+				5D3C05F820C3C4730097197E /* AppDelegate.swift */,
+				5D6D28A120EE04ED000E8AA2 /* ColorPalette.swift */,
+				5D29E44020C8A5AB00FC2D9F /* CoreData */,
+				5D2387F420E5DBE700DA14CD /* Main Screen */,
+				5D83B8CD20E9CFEA0071E950 /* LocalAuthentication */,
+				5DB798A820CF7F6600302398 /* Password */,
+				5D2387F020E456FD00DA14CD /* Memo */,
+				5DB798A920CF7F7700302398 /* Media */,
+				5D2387F120E4804F00DA14CD /* Settings */,
+				5D83B8CA20E9CF710071E950 /* AutoFaceTouch */,
+				5DD1C7BA20CAF7AA00DEC9D3 /* Resources */,
+			);
+			path = PasswordKeeper;
+			sourceTree = "<group>";
+		};
+		5D3C060C20C3C4730097197E /* PasswordKeeperTests */ = {
+			isa = PBXGroup;
+			children = (
+				5D3C060D20C3C4730097197E /* PasswordKeeperTests.swift */,
+				5D3C060F20C3C4730097197E /* Info.plist */,
+			);
+			path = PasswordKeeperTests;
+			sourceTree = "<group>";
+		};
+		5D83B8BD20E9CC510071E950 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D3C061820C3C49C0097197E /* MainScreenViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5D83B8BE20E9CCB50071E950 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				5D83B8AF20E83D810071E950 /* SettingsController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		5D83B8BF20E9CCCF0071E950 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D0A181C20CC722900410CFD /* SettingsTableViewController.swift */,
+				5DD1C7BB20CAF81500DEC9D3 /* ResetPasswordViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5D83B8C020E9CD2C0071E950 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5DB7989420CE2BD900302398 /* AlbumListTableViewCell.swift */,
+				5DB798A120CEDF7E00302398 /* MediaListCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5D83B8C120E9CD330071E950 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5DEB97FA20CDDE4A000EA92D /* AlbumTableViewController.swift */,
+				5D1A312920EAD3B600A83D38 /* MediaListViewController.swift */,
+				5DB798A320CEEF0E00302398 /* MediaPreviewViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5D83B8C220E9CE190071E950 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5DB798A520CF7CDA00302398 /* PasswordListTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5D83B8C320E9CE200071E950 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				5D29E43E20C891E600FC2D9F /* PasswordController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		5D83B8C420E9CE370071E950 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D29E43420C83F3100FC2D9F /* PasswordListTableViewController.swift */,
+				5D29E44C20C9D7A600FC2D9F /* PasswordDetailViewController.swift */,
+				5DCC32E320D0E24E007110E9 /* AddPasswordViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5D83B8C520E9CEA50071E950 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				5D29E44A20C992D500FC2D9F /* PasswordInputController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		5D83B8C620E9CEC20071E950 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5D7A3A7E20E7614700384D6E /* MemoListTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5D83B8C720E9CECA0071E950 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D2387F520E6CB1500DA14CD /* MemoListTableViewController.swift */,
+				5D7A3A8020E7656900384D6E /* MemoDetailViewController.swift */,
+				5D2387F720E6D12D00DA14CD /* AddMemoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5D83B8C820E9CED30071E950 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				5D2387FB20E6DDAC00DA14CD /* MemoController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		5D83B8C920E9CEDE0071E950 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				5DB7989720CE2E2D00302398 /* AlbumController.swift */,
+				5DB7989D20CED6BA00302398 /* MediaController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		5D83B8CA20E9CF710071E950 /* AutoFaceTouch */ = {
+			isa = PBXGroup;
+			children = (
+				5D83B8CB20E9CF880071E950 /* Model */,
+				5D83B8CC20E9CFA30071E950 /* ModelController */,
+			);
+			path = AutoFaceTouch;
+			sourceTree = "<group>";
+		};
+		5D83B8CB20E9CF880071E950 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D83B8B720E84DFD0071E950 /* AutoFaceTouch.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D83B8CC20E9CFA30071E950 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				5D83B8B920E84E2B0071E950 /* AutoFaceTouchController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		5D83B8CD20E9CFEA0071E950 /* LocalAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				5DEB97F420CD89BC000EA92D /* LocalAuthentication.swift */,
+			);
+			path = LocalAuthentication;
+			sourceTree = "<group>";
+		};
+		5DB798A820CF7F6600302398 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				5D83B8C220E9CE190071E950 /* Views */,
+				5D83B8C420E9CE370071E950 /* ViewControllers */,
+				5D83B8C320E9CE200071E950 /* ModelController */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		5DB798A920CF7F7700302398 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				5D83B8C020E9CD2C0071E950 /* Views */,
+				5D83B8C120E9CD330071E950 /* ViewControllers */,
+				5D83B8C920E9CEDE0071E950 /* ModelController */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		5DD1C7BA20CAF7AA00DEC9D3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D3C05FF20C3C4730097197E /* Assets.xcassets */,
+				5D3C05FC20C3C4730097197E /* Main.storyboard */,
+				5DB7989220CDE3B000302398 /* Password.storyboard */,
+				5D2387EC20E456D600DA14CD /* Memo.storyboard */,
+				5DB7988E20CDE08C00302398 /* Media.storyboard */,
+				5D2387F220E5B3AA00DA14CD /* Settings.storyboard */,
+				5D3C060120C3C4730097197E /* LaunchScreen.storyboard */,
+				5D3C060420C3C4730097197E /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D3C05F420C3C4720097197E /* PasswordKeeper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D3C061220C3C4730097197E /* Build configuration list for PBXNativeTarget "PasswordKeeper" */;
+			buildPhases = (
+				5D3C05F120C3C4720097197E /* Sources */,
+				5D3C05F220C3C4720097197E /* Frameworks */,
+				5D3C05F320C3C4720097197E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PasswordKeeper;
+			productName = PasswordKeeper;
+			productReference = 5D3C05F520C3C4730097197E /* PasswordKeeper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5D3C060820C3C4730097197E /* PasswordKeeperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D3C061520C3C4730097197E /* Build configuration list for PBXNativeTarget "PasswordKeeperTests" */;
+			buildPhases = (
+				5D3C060520C3C4730097197E /* Sources */,
+				5D3C060620C3C4730097197E /* Frameworks */,
+				5D3C060720C3C4730097197E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D3C060B20C3C4730097197E /* PBXTargetDependency */,
+			);
+			name = PasswordKeeperTests;
+			productName = PasswordKeeperTests;
+			productReference = 5D3C060920C3C4730097197E /* PasswordKeeperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D3C05ED20C3C4720097197E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Herman Kwan";
+				TargetAttributes = {
+					5D3C05F420C3C4720097197E = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					5D3C060820C3C4730097197E = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 5D3C05F420C3C4720097197E;
+					};
+				};
+			};
+			buildConfigurationList = 5D3C05F020C3C4720097197E /* Build configuration list for PBXProject "PasswordKeeper" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5D3C05EC20C3C4720097197E;
+			productRefGroup = 5D3C05F620C3C4730097197E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D3C05F420C3C4720097197E /* PasswordKeeper */,
+				5D3C060820C3C4730097197E /* PasswordKeeperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D3C05F320C3C4720097197E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D2387ED20E456D600DA14CD /* Memo.storyboard in Resources */,
+				5D3C060320C3C4730097197E /* LaunchScreen.storyboard in Resources */,
+				5DB7988F20CDE08C00302398 /* Media.storyboard in Resources */,
+				5DB7989320CDE3B000302398 /* Password.storyboard in Resources */,
+				5D3C060020C3C4730097197E /* Assets.xcassets in Resources */,
+				5D3C05FE20C3C4730097197E /* Main.storyboard in Resources */,
+				5D2387F320E5B3AA00DA14CD /* Settings.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D3C060720C3C4730097197E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D3C05F120C3C4720097197E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DB798A220CEDF7E00302398 /* MediaListCollectionViewCell.swift in Sources */,
+				5D83B8B820E84DFD0071E950 /* AutoFaceTouch.swift in Sources */,
+				5D2387FA20E6DD0300DA14CD /* Memo+Convenience.swift in Sources */,
+				5DB7989520CE2BD900302398 /* AlbumListTableViewCell.swift in Sources */,
+				5DB7989820CE2E2D00302398 /* AlbumController.swift in Sources */,
+				5DB7989A20CECAD500302398 /* Album+Convenience.swift in Sources */,
+				5D83B8BA20E84E2B0071E950 /* AutoFaceTouchController.swift in Sources */,
+				5D83B8B020E83D810071E950 /* SettingsController.swift in Sources */,
+				5D2387F620E6CB1500DA14CD /* MemoListTableViewController.swift in Sources */,
+				5D29E44D20C9D7A600FC2D9F /* PasswordDetailViewController.swift in Sources */,
+				5DCC32E420D0E24E007110E9 /* AddPasswordViewController.swift in Sources */,
+				5DB798A020CED76200302398 /* Media+Convenience.swift in Sources */,
+				5D1A312A20EAD3B600A83D38 /* MediaListViewController.swift in Sources */,
+				5D0A181D20CC722900410CFD /* SettingsTableViewController.swift in Sources */,
+				5D2387F820E6D12D00DA14CD /* AddMemoViewController.swift in Sources */,
+				5D29E44920C98B4800FC2D9F /* Password+Convenience.swift in Sources */,
+				5DD1C7BC20CAF81500DEC9D3 /* ResetPasswordViewController.swift in Sources */,
+				5D29E44420C8AFE100FC2D9F /* CoreDataStack.swift in Sources */,
+				5DB7989E20CED6BA00302398 /* MediaController.swift in Sources */,
+				5D29E44720C98A4D00FC2D9F /* PasswordKeeper.xcdatamodeld in Sources */,
+				5D2387FC20E6DDAC00DA14CD /* MemoController.swift in Sources */,
+				5D3C05F920C3C4730097197E /* AppDelegate.swift in Sources */,
+				5DB798A620CF7CDA00302398 /* PasswordListTableViewCell.swift in Sources */,
+				5D29E44B20C992D500FC2D9F /* PasswordInputController.swift in Sources */,
+				5D3C061920C3C49C0097197E /* MainScreenViewController.swift in Sources */,
+				5DB798A420CEEF0E00302398 /* MediaPreviewViewController.swift in Sources */,
+				5D7A3A7F20E7614700384D6E /* MemoListTableViewCell.swift in Sources */,
+				5DEB97FB20CDDE4A000EA92D /* AlbumTableViewController.swift in Sources */,
+				5D29E43F20C891E600FC2D9F /* PasswordController.swift in Sources */,
+				5DEB97F520CD89BC000EA92D /* LocalAuthentication.swift in Sources */,
+				5D29E43520C83F3100FC2D9F /* PasswordListTableViewController.swift in Sources */,
+				5D7A3A8120E7656900384D6E /* MemoDetailViewController.swift in Sources */,
+				5D6D28A220EE04ED000E8AA2 /* ColorPalette.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D3C060520C3C4730097197E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D3C060E20C3C4730097197E /* PasswordKeeperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D3C060B20C3C4730097197E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D3C05F420C3C4720097197E /* PasswordKeeper */;
+			targetProxy = 5D3C060A20C3C4730097197E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5D3C05FC20C3C4730097197E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D3C05FD20C3C4730097197E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5D3C060120C3C4730097197E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D3C060220C3C4730097197E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5D3C061020C3C4730097197E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5D3C061120C3C4730097197E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5D3C061320C3C4730097197E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M7K48WSGV7;
+				INFOPLIST_FILE = "$(SRCROOT)/PasswordKeeper/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HermanKayy.PasswordKeeper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5D3C061420C3C4730097197E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M7K48WSGV7;
+				INFOPLIST_FILE = "$(SRCROOT)/PasswordKeeper/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HermanKayy.PasswordKeeper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		5D3C061620C3C4730097197E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M7K48WSGV7;
+				INFOPLIST_FILE = PasswordKeeperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HermanKayy.PasswordKeeperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PasswordKeeper.app/PasswordKeeper";
+			};
+			name = Debug;
+		};
+		5D3C061720C3C4730097197E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M7K48WSGV7;
+				INFOPLIST_FILE = PasswordKeeperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HermanKayy.PasswordKeeperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PasswordKeeper.app/PasswordKeeper";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D3C05F020C3C4720097197E /* Build configuration list for PBXProject "PasswordKeeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D3C061020C3C4730097197E /* Debug */,
+				5D3C061120C3C4730097197E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D3C061220C3C4730097197E /* Build configuration list for PBXNativeTarget "PasswordKeeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D3C061320C3C4730097197E /* Debug */,
+				5D3C061420C3C4730097197E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D3C061520C3C4730097197E /* Build configuration list for PBXNativeTarget "PasswordKeeperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D3C061620C3C4730097197E /* Debug */,
+				5D3C061720C3C4730097197E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5D29E44520C98A4D00FC2D9F /* PasswordKeeper.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5D29E44620C98A4D00FC2D9F /* PasswordKeeper.xcdatamodel */,
+			);
+			currentVersion = 5D29E44620C98A4D00FC2D9F /* PasswordKeeper.xcdatamodel */;
+			path = PasswordKeeper.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5D3C05ED20C3C4720097197E /* Project object */;
+}

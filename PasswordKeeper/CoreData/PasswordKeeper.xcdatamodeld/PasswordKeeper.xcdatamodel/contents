@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Album" representedClassName="Album" syncable="YES" codeGenerationType="class">
+        <attribute name="image" attributeType="Binary" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="medias" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Media" inverseName="album" inverseEntity="Media" syncable="YES"/>
+    </entity>
+    <entity name="Media" representedClassName="Media" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="video" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="album" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Album" inverseName="medias" inverseEntity="Album" syncable="YES"/>
+    </entity>
+    <entity name="Memo" representedClassName="Memo" syncable="YES" codeGenerationType="class">
+        <attribute name="color" attributeType="String" syncable="YES"/>
+        <attribute name="notes" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Password" representedClassName="Password" syncable="YES" codeGenerationType="class">
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="passcode" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <attribute name="username" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Album" positionX="-155" positionY="105" width="128" height="90"/>
+        <element name="Media" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Memo" positionX="-297" positionY="108" width="128" height="90"/>
+        <element name="Password" positionX="-506" positionY="48" width="128" height="105"/>
+    </elements>
+</model>
