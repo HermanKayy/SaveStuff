@@ -84,7 +84,6 @@ class PasswordDetailViewController: UIViewController {
         passwordTextField.isSecureTextEntry = true
     }
     
-    
     func setupViews() {
         guard let password = passwword else { return }
         titleTextField.text = password.title
