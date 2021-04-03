@@ -27,6 +27,18 @@ class MainScreenViewController: UIViewController {
     @IBOutlet weak var circleView: UIView!
     @IBOutlet weak var textFieldCover: UIView!
     @IBOutlet weak var textFieldStack: UIStackView!
+
+    lazy var textFields: [UITextField] = {
+        [
+            passwordOne,
+            passwordTwo,
+            passwordThree,
+            passwordFour,
+            passwordFive,
+            passwordSix
+        ]
+    }()
+    var textFieldInputStr = ""
     
     // MARK: LifeCycles
     
@@ -69,7 +81,6 @@ class MainScreenViewController: UIViewController {
         setupTextFields()
         setupAuthenticationLabel()
         setupAuthentication()
-        UIApplication.shared.statusBarStyle = .default
         animateCircleView()
     }
     
@@ -193,158 +204,46 @@ class MainScreenViewController: UIViewController {
 // MARK: TextField Delegate
 extension MainScreenViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let text = textField.text else { return true }
-        switch textField {
-        case passwordOne:
-            if text.count != 1 {
-                textField.text = string
-                passwordOne.backgroundColor = UIColor(red: 144/255.0, green: 175/255.0, blue: 197/255.0, alpha: 1.0)
-                if userFirstDownload {
-                    passwordController.addUserPasswordInput(number: Int(string) ?? 0)
-                } else {
-                    passwordController.addPasscodeInput(number: Int(string) ?? 0)
-                }
-                return false
-            } else if string == "" {
-                textField.text = ""
-                passwordOne.backgroundColor = UIColor.white
-                if userFirstDownload {
-                    passwordController.deleteUserInput()
-                } else {
-                    passwordController.deletePasscodeInput()
-                }
-                return false
+        guard textFieldInputStr.count < 5 else {
+            if userFirstDownload {
+                passwordController.addUserPasswordInput(number: Int(string) ?? 0)
+                passwordController.saveToLocalPersistence()
+                performSegue(withIdentifier: "showVC", sender: self)
             } else {
-                textField.resignFirstResponder()
-                passwordTwo.becomeFirstResponder()
-                passwordTwo.backgroundColor = UIColor(red: 144/255.0, green: 175/255.0, blue: 197/255.0, alpha: 1.0)
-
-                if userFirstDownload {
-                    passwordController.addUserPasswordInput(number: Int(string) ?? 0)
-                    print("userPasscode", PasswordInputController.shared.userPassword)
-                } else {
-                    passwordController.addPasscodeInput(number: Int(string) ?? 0)
-                }
-                return true
-            }
-            
-        case passwordTwo:
-            if string == "" {
-                textField.text = ""
-                passwordTwo.backgroundColor = UIColor.white
-                textField.resignFirstResponder()
-                passwordOne.becomeFirstResponder()
-                if userFirstDownload {
-                    passwordController.deleteUserInput()
-                } else {
-                    passwordController.deletePasscodeInput()
-                }
-                return false
-            } else {
-                textField.resignFirstResponder()
-                passwordThree.becomeFirstResponder()
-                passwordThree.backgroundColor = UIColor(red: 144/255.0, green: 175/255.0, blue: 197/255.0, alpha: 1.0)
-
-                if userFirstDownload {
-                    passwordController.addUserPasswordInput(number: Int(string) ?? 0)
-                } else {
-                    passwordController.addPasscodeInput(number: Int(string) ?? 0)
-                }
-                return true
-            }
-            
-        case passwordThree:
-            if string == "" {
-                textField.text = ""
-                textField.resignFirstResponder()
-                passwordTwo.becomeFirstResponder()
-                passwordThree.backgroundColor = UIColor.white
-                if userFirstDownload {
-                    passwordController.deleteUserInput()
-                } else {
-                    passwordController.deletePasscodeInput()
-                }
-                return false
-            } else {
-                textField.resignFirstResponder()
-                passwordFour.becomeFirstResponder()
-                passwordFour.backgroundColor = UIColor(red: 144/255.0, green: 175/255.0, blue: 197/255.0, alpha: 1.0)
-
-                if userFirstDownload {
-                    passwordController.addUserPasswordInput(number: Int(string) ?? 0)
-                } else {
-                    passwordController.addPasscodeInput(number: Int(string) ?? 0)
-                }
-                return true
-            }
-            
-        case passwordFour:
-            if string == "" {
-                textField.text = ""
-                textField.resignFirstResponder()
-                passwordThree.becomeFirstResponder()
-                passwordFour.backgroundColor = UIColor.white
-                if userFirstDownload {
-                    passwordController.deleteUserInput()
-                } else {
-                    passwordController.deletePasscodeInput()
-                }
-                return false
-            } else {
-                textField.resignFirstResponder()
-                passwordFive.becomeFirstResponder()
-                passwordFive.backgroundColor = UIColor(red: 144/255.0, green: 175/255.0, blue: 197/255.0, alpha: 1.0)
-
-                if userFirstDownload {
-                    passwordController.addUserPasswordInput(number: Int(string) ?? 0)
-                    print("userPasscode", PasswordInputController.shared.userPassword)
-                } else {
-                    passwordController.addPasscodeInput(number: Int(string) ?? 0)
-                    print(PasswordInputController.shared.passwordInput)
-                }
-                return true
-            }
-            
-        case passwordFive:
-            if string == "" {
-                textField.text = ""
-                textField.resignFirstResponder()
-                passwordFour.becomeFirstResponder()
-                passwordFive.backgroundColor = UIColor.white
-                if userFirstDownload {
-                    passwordController.deleteUserInput()
-                } else {
-                    passwordController.deletePasscodeInput()
-                }
-                return false
-            } else {
-                textField.resignFirstResponder()
-                passwordSix.becomeFirstResponder()
-                passwordSix.backgroundColor = UIColor(red: 144/255.0, green: 175/255.0, blue: 197/255.0, alpha: 1.0)
-
-                if userFirstDownload {
-                    passwordController.addUserPasswordInput(number: Int(string) ?? 0)
-                    passwordController.saveToLocalPersistence()
+                PasswordInputController.shared.addPasscodeInput(number: Int(string) ?? 0)
+                if passwordController.passwordInput == passwordController.userPassword {
+                    passwordController.passwordInput.removeAll()
+                    textFieldInputStr.removeAll()
                     performSegue(withIdentifier: "showVC", sender: self)
                 } else {
-                    PasswordInputController.shared.addPasscodeInput(number: Int(string) ?? 0)
-                    if passwordController.passwordInput == passwordController.userPassword {
-                        passwordSix.text = string 
-                        passwordController.passwordInput.removeAll()
-                        performSegue(withIdentifier: "showVC", sender: self)
-                    } else {
-                        passwordSix.text = string
-                        handleWrongPassword()
-                    }
+                    textFields.forEach { $0.backgroundColor = .white }
+                    textFieldInputStr.removeAll()
+                    handleWrongPassword()
                 }
-                return true
             }
-            
-        default:
-            return false
+            return true
         }
-    }
+        if string == "" {
+            let count = textFieldInputStr.count - 1
+            textFields[count].backgroundColor = .white
+            textFieldInputStr.removeLast()
+            userFirstDownload
+                ? passwordController.deleteUserInput()
+                : passwordController.deletePasscodeInput()
+        } else {
+            textFieldInputStr += string
+            let numb = Int(string) ?? 0
+            userFirstDownload
+                ? passwordController.addUserPasswordInput(number: numb)
+                : passwordController.addPasscodeInput(number: numb)
+        }
 
+        for i in 0..<textFieldInputStr.count {
+            textFields[i].backgroundColor = UIColor(red: 144/255.0, green: 175/255.0, blue: 197/255.0, alpha: 1.0)
+        }
+        print(textFieldInputStr)
+        return true
+    }
 }
 
 

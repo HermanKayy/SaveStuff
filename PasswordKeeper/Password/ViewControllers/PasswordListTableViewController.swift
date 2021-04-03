@@ -32,16 +32,15 @@ class PasswordListTableViewController: UITableViewController {
         super.viewDidLoad()
         
         // NavBar Properties
-        navigationController?.navigationBar.barTintColor = UIColor.ColorPalette.themeColor
+        //        navigationController?.navigationBar.barTintColor = UIColor.ColorPalette.themeColor
 
         navigationItem.title = "Password"
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        
+
         // Tableview Properties
         tableView.separatorStyle = .none
         tableView.tableHeaderView = searchController.searchBar
-        
+
         // Search Controller Properties
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = true

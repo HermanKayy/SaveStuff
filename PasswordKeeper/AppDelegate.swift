@@ -6,6 +6,7 @@
 //  Copyright © 2018 Herman Kwan. All rights reserved.
 //
 
+import AudioToolbox
 import UIKit
 import LocalAuthentication
 
@@ -18,6 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: DidFinishLaunching
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         AutoFaceTouchController.shared.autoFaceTouch.isOn = UserDefaults.standard.bool(forKey: "AutoFaceTouch")
+
+        if #available(iOS 13.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.backgroundColor = UIColor.ColorPalette.themeColor
+            UINavigationBar.appearance().standardAppearance = navBarAppearance
+            UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+        } else {
+            // Fallback on earlier versions
+        }
         return true
     }
     
