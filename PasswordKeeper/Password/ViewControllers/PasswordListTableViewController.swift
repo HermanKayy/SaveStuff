@@ -14,13 +14,17 @@ class PasswordListTableViewController: UITableViewController {
     // MARK: Propertie s
     let searchController = UISearchController(searchResultsController: nil)
     var filteredPasswords: [Password]?
-    var tableViewIsEditing = false
+    var tableViewIsEditing: Bool = false {
+        didSet {
+            tableView.setEditing(tableViewIsEditing, animated: true)
+        }
+    }
     
     // MARK: LifeCycles
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if !PasswordController.shared.passwords.isEmpty {
-            navigationItem.rightBarButtonItem?.isEnabled = true
+            navigationItem.leftBarButtonItem?.isEnabled = true
         }
         tabBarController?.tabBar.isHidden = false
         filteredPasswords = PasswordController.shared.passwords
@@ -54,6 +58,7 @@ class PasswordListTableViewController: UITableViewController {
         searchController.searchBar.text = ""
         searchController.searchBar.showsCancelButton = false
         searchController.dismiss(animated: true, completion: nil)
+        tableView.setEditing(false, animated: true)
     }
 
     // MARK: - TableView DataSource
@@ -93,9 +98,8 @@ class PasswordListTableViewController: UITableViewController {
             
             if PasswordController.shared.passwords.isEmpty {
                 tableViewIsEditing = false
-                navigationItem.rightBarButtonItem?.isEnabled = false
-                tableView.setEditing(false, animated: true)
-                navigationItem.rightBarButtonItem?.title = "Edit"
+                navigationItem.leftBarButtonItem?.isEnabled = false
+                navigationItem.leftBarButtonItem?.title = "Edit"
             }
         }
     }
@@ -123,15 +127,13 @@ class PasswordListTableViewController: UITableViewController {
     }
     
     // MARK: IBActions
-    @IBAction func rightBarButtonTapped(_ sender: UIBarButtonItem) {
+    @IBAction func leftBarButtonTapped(_ sender: UIBarButtonItem) {
         if tableViewIsEditing == false {
             tableViewIsEditing = true
-            tableView.setEditing(true, animated: true)
-            navigationItem.rightBarButtonItem?.title = "Cancel"
+            navigationItem.leftBarButtonItem?.title = "Cancel"
         } else {
             tableViewIsEditing = false
-            tableView.setEditing(false, animated: true)
-            navigationItem.rightBarButtonItem?.title = "Edit"
+            navigationItem.leftBarButtonItem?.title = "Edit"
         }
     }
 }
