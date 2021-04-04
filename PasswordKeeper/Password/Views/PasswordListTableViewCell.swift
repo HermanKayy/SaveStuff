@@ -17,10 +17,11 @@ class PasswordListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cellContainerView: UIView!
     
-    
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var lockButtonImage: UIImageView!
     @IBOutlet weak var lockButton: UIButton!
+
+    var passcode: String?
     
     weak var delegate: PasswordListTableViewCellDelegate?
     
@@ -50,6 +51,11 @@ class PasswordListTableViewCell: UITableViewCell {
         passwordLabel.numberOfLines = 1
     }
     
+    @IBAction func lockButtonTapped(_ sender: UIButton) {
+        UIPasteboard.general.string = passcode
+        lockButtonImage.image = UIImage(named: "unlock")
+    }
+
     func lockIsPressed(password: Password) {
         let impactFeedback = UIImpactFeedbackGenerator(style: .heavy)
         impactFeedback.impactOccurred()

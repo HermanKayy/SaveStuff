@@ -76,9 +76,11 @@ class PasswordListTableViewController: UITableViewController {
         if let passwords = filteredPasswords {
             let password = passwords[indexPath.row]
             cell.passwordLabel.text = password.title
+            cell.passcode = password.passcode
         } else {
             let password = PasswordController.shared.passwords[indexPath.row]
             cell.passwordLabel.text = password.title
+            cell.passcode = password.passcode
         }
         
         cell.backgroundColor = UIColor.white
