@@ -204,7 +204,7 @@ class MainScreenViewController: UIViewController {
 // MARK: TextField Delegate
 extension MainScreenViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard textFieldInputStr.count < 5 else {
+        if textFieldInputStr.count == 5 && string != "" {
             if userFirstDownload {
                 passwordController.addUserPasswordInput(number: Int(string) ?? 0)
                 passwordController.saveToLocalPersistence()
@@ -223,6 +223,7 @@ extension MainScreenViewController: UITextFieldDelegate {
             }
             return true
         }
+        
         if string == "" {
             let count = textFieldInputStr.count - 1
             textFields[count].backgroundColor = .white

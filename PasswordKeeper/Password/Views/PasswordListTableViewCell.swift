@@ -53,7 +53,6 @@ class PasswordListTableViewCell: UITableViewCell {
     
     @IBAction func lockButtonTapped(_ sender: UIButton) {
         UIPasteboard.general.string = passcode
-        lockButtonImage.image = UIImage(named: "unlock")
     }
 
     func lockIsPressed(password: Password) {
@@ -66,7 +65,7 @@ class PasswordListTableViewCell: UITableViewCell {
     }
     
     func lockIsReleased(password: Password) {
-        lockButtonImage.image = #imageLiteral(resourceName: "lock")
+        lockButtonImage.image = UIImage(named: "clipboard")
         passwordLabel.font = UIFont.boldSystemFont(ofSize: 30)
         passwordLabel.text = password.title
     }
