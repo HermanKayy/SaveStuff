@@ -223,7 +223,7 @@ extension MainScreenViewController: UITextFieldDelegate {
             }
             return true
         }
-        
+
         if string == "" {
             let count = textFieldInputStr.count - 1
             textFields[count].backgroundColor = .white
@@ -242,7 +242,6 @@ extension MainScreenViewController: UITextFieldDelegate {
         for i in 0..<textFieldInputStr.count {
             textFields[i].backgroundColor = UIColor(red: 144/255.0, green: 175/255.0, blue: 197/255.0, alpha: 1.0)
         }
-        print(textFieldInputStr)
         return true
     }
 }

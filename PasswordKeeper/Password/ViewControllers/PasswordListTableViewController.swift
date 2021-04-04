@@ -34,7 +34,7 @@ class PasswordListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // NavBar Properties
         //        navigationController?.navigationBar.barTintColor = UIColor.ColorPalette.themeColor
 
@@ -49,7 +49,7 @@ class PasswordListTableViewController: UITableViewController {
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = true
         searchController.dimsBackgroundDuringPresentation = false
-        searchController.searchBar.tintColor = UIColor.white
+        searchController.searchBar.tintColor = UIColor.black
     }
     
     
@@ -85,7 +85,7 @@ class PasswordListTableViewController: UITableViewController {
         
         cell.backgroundColor = UIColor.white
         cell.selectionStyle = .none 
-        cell.lockButtonImage.image = #imageLiteral(resourceName: "lock")
+        cell.lockButtonImage.image = UIImage(named: "clipboard")
         cell.delegate = self
         return cell
     }
@@ -173,6 +173,14 @@ extension PasswordListTableViewController: PasswordListTableViewCellDelegate {
         
         let password = PasswordController.shared.passwords[indexPath.row]
         sender.lockIsReleased(password: password)
+    }
+
+    func copyToClipboardPressed() {
+        let alert = UIAlertController(title: "Passcode copied!", message: nil, preferredStyle: UIAlertController.Style.alert)
+          self.present(alert, animated: true, completion: nil)
+          DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+              alert.dismiss(animated: true, completion: nil)
+          }
     }
 }
 

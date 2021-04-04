@@ -11,6 +11,7 @@ import UIKit
 protocol PasswordListTableViewCellDelegate: class {
     func lockButtonPressed(_ sender: PasswordListTableViewCell)
     func lockButtonReleased(_ sender: PasswordListTableViewCell)
+    func copyToClipboardPressed()
 }
 
 class PasswordListTableViewCell: UITableViewCell {
@@ -53,12 +54,13 @@ class PasswordListTableViewCell: UITableViewCell {
     
     @IBAction func lockButtonTapped(_ sender: UIButton) {
         UIPasteboard.general.string = passcode
+        delegate?.copyToClipboardPressed()
     }
 
     func lockIsPressed(password: Password) {
         let impactFeedback = UIImpactFeedbackGenerator(style: .heavy)
         impactFeedback.impactOccurred()
-        lockButtonImage.image = #imageLiteral(resourceName: "unlock")
+//        lockButtonImage.image = #imageLiteral(resourceName: "unlock")
         guard let username = password.username, let passcode = password.passcode else { return }
         passwordLabel.font = UIFont.systemFont(ofSize: 13)
         passwordLabel.text = "\(username) \n \(passcode)"
